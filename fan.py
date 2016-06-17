@@ -21,7 +21,7 @@ if len(sys.argv) > 1:
                 GPIO.output(18, GPIO.LOW)
 else:
         while True:
-                if float(getCPUtemperature()) > 40:
+                if float(getCPUtemperature()) > 42:
                         GPIO.output(18, GPIO.HIGH)
-                else:
+                elif float(getCPUtemperature()) < 38:
                         GPIO.output(18, GPIO.LOW)
